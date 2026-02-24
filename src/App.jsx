@@ -1,19 +1,17 @@
 import { HashRouter, Routes, Route, Link } from "react-router-dom";
 //import './App.css'
-import StartPage from './pages/start'
-import AbsoutPage from "./pages/about";
-import ProjectPage from "./pages/projects";
-import ContactPage from "./pages/contact";
+import StartPage from "./pages/Start"
+import AbsoutPage from "./pages/About";
+import ProjectPage from "./pages/Projects";
+import ContactPage from "./pages/Contact";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
     <HashRouter>
-      <nav style={{ display: "flex", gap: 12 }}>
-        <Link to="/">Start</Link>
-        <Link to="/about">About</Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/contact">Contact</Link>
-      </nav>
+
+    <Header />
 
       <Routes>
         <Route path="/" element={<StartPage />} />
@@ -21,6 +19,9 @@ export default function App() {
         <Route path="/projects" element={<ProjectPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
+
+      <Footer />
+
     </HashRouter>
   );
 }
