@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { HashRouter, Routes, Route, Link } from "react-router-dom";
+//import './App.css'
+import StartPage from './pages/start'
+import AbsoutPage from "./pages/about";
+import ProjectPage from "./pages/projects";
+import ContactPage from "./pages/contact";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        llll
-      </p>
-    </>
-  )
-}
+    <HashRouter>
+      <nav style={{ display: "flex", gap: 12 }}>
+        <Link to="/">Start</Link>
+        <Link to="/about">About</Link>
+        <Link to="/projects">Projects</Link>
+        <Link to="/contact">Contact</Link>
+      </nav>
 
-export default App
+      <Routes>
+        <Route path="/" element={<StartPage />} />
+        <Route path="/about" element={<AbsoutPage />} />
+        <Route path="/projects" element={<ProjectPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+    </HashRouter>
+  );
+}
