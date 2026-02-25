@@ -1,8 +1,18 @@
 import { useState } from "react";
-import { XIcon } from "lucide-react";
+import { XIcon, ExternalLinkIcon, GithubIcon } from "lucide-react";
 
-const ProjectCard = ({ title, description, image, tags, longText }) => {
+const ProjectCard = ({
+  title,
+  description,
+  image,
+  tags = [],
+  list = [],
+  longText,
+  links = [], // [{ label: "Frontend repo", href: "..." }, ...]
+}) => {
   const [open, setOpen] = useState(false);
+
+  const isGithub = (url = "") => url.toLowerCase().includes("github.com");
 
   return (
     <>
@@ -13,70 +23,112 @@ const ProjectCard = ({ title, description, image, tags, longText }) => {
             src={image}
             alt={title}
             className="h-52 w-full object-cover transition duration-300 group-hover:scale-105"
+            loading="lazy"
           />
         </div>
 
         <div className="p-5">
-          <h3 className="text-lg font-semibold text-zinc-900">
-            {title}
-          </h3>
+          <h3 className="text-lg font-semibold text-zinc-900">{title}</h3>
+          <p className="mt-2 text-sm text-zinc-600">{description}</p>
 
-          <p className="mt-2 text-sm text-zinc-600">
-            {description}
-          </p>
-
-          <div className="mt-4 flex flex-wrap gap-2">
-            {tags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
+          {tags.length > 0 && (
+            <div className="mt-4 flex flex-wrap gap-2">
+              {tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs text-zinc-600"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
 
           <button
             onClick={() => setOpen(true)}
-            className="mt-6 text-sm font-medium text-zinc-900 hover:underline"
+            className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-zinc-900 hover:underline"
           >
-            Läs mer →
+            Läs mer <span aria-hidden>→</span>
           </button>
         </div>
       </div>
 
       {/* Modal */}
       {open && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 p-4">
-          <div className="relative w-full max-w-2xl rounded-3xl border border-zinc-200 bg-white p-8 shadow-xl">
+        <div
+          className="fixed inset-0 z-50 bg-black/30 p-4"
+          onClick={() => setOpen(false)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div
+            className="mx-auto mt-16 w-full max-w-2xl rounded-3xl border border-zinc-200 bg-white p-7 shadow-xl sm:p-8"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Top row */}
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <h2 className="text-2xl font-semibold text-zinc-900">{title}</h2>
 
-            {/* Close button */}
-            <button
-              onClick={() => setOpen(false)}
-              className="absolute right-4 top-4 text-zinc-500 hover:text-zinc-900"
-            >
-              <XIcon size={20} />
-            </button>
+                {tags.length > 0 && (
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs text-zinc-600"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
 
-            <h2 className="text-2xl font-semibold text-zinc-900">
-              {title}
-            </h2>
-
-            <p className="mt-4 text-zinc-600">
-              {longText}
-            </p>
-
-            <div className="mt-6 flex flex-wrap gap-2">
-              {tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600"
-                >
-                  {tag}
-                </span>
-              ))}
+              <button
+                onClick={() => setOpen(false)}
+                className="rounded-xl border border-zinc-200 bg-white p-2 text-zinc-600 transition hover:bg-zinc-50 hover:text-zinc-900"
+                aria-label="Stäng"
+              >
+                <XIcon size={18} />
+              </button>
             </div>
 
+            {longText && <p className="mt-5 text-zinc-600">{longText}</p>}
+
+            {list.length > 0 && (
+              <ul className="mt-5 list-disc space-y-2 pl-6 text-zinc-600">
+                {list.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            )}
+
+            {/* Links */}
+            {links.length > 0 && (
+              <div className="mt-7 flex flex-wrap gap-3">
+                {links.map((l) => (
+                  <a
+                    key={l.href}
+                    href={l.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium transition
+                      ${
+                        isGithub(l.href)
+                          ? "bg-zinc-900 text-white hover:bg-zinc-800"
+                          : "border border-zinc-200 bg-white text-zinc-900 hover:bg-zinc-50"
+                      }`}
+                  >
+                    {isGithub(l.href) ? (
+                      <GithubIcon size={18} />
+                    ) : (
+                      <ExternalLinkIcon size={18} />
+                    )}
+                    {l.label}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       )}
