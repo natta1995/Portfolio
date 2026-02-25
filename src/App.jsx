@@ -1,5 +1,5 @@
 import { HashRouter, Routes, Route, Link } from "react-router-dom";
-//import './App.css'
+import './App.css'
 import StartPage from "./pages/Start"
 import AbsoutPage from "./pages/About";
 import ProjectPage from "./pages/Projects";

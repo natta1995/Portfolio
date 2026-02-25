@@ -5,9 +5,9 @@ const Header = () => {
         <div>
               <nav style={{ display: "flex", gap: 12 }}>
         <Link to="/">Start</Link>
-        <Link to="/about">About</Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/contact">Contact</Link>
+        <Link to="/about">Om mig</Link>
+        <Link to="/projects">Passion Projects</Link>
+        <Link to="/contact">Kontakt</Link>
       </nav>
         </div>
     )
