@@ -1,3 +1,5 @@
+
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -17,14 +19,11 @@ export default function Footer() {
               className="text-zinc-700 hover:text-zinc-900"
               href="mailto:dinmail@exempel.com"
             >
-              dinmail@exempel.com
+              natalie.hallerdal@yahoo.se
             </a>
             <div className="flex gap-4 text-zinc-600">
               <a className="hover:text-zinc-900" href="#" aria-label="LinkedIn">
-                LinkedIn
-              </a>
-              <a className="hover:text-zinc-900" href="#" aria-label="GitHub">
-                GitHub
+                0735936556
               </a>
             </div>
           </div>
