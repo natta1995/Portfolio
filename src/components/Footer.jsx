@@ -17,14 +17,15 @@ export default function Footer() {
           <div className="flex flex-col gap-2 text-sm">
             <a
               className="text-zinc-700 hover:text-zinc-900"
-              href="mailto:dinmail@exempel.com"
             >
               natalie.hallerdal@yahoo.se
             </a>
             <div className="flex gap-4 text-zinc-600">
-              <a className="hover:text-zinc-900" href="#" aria-label="LinkedIn">
-                0735936556
-              </a>
+            <a
+              className="text-zinc-700 hover:text-zinc-900"
+            >
+              0735936556
+            </a>
             </div>
           </div>
         </div>
