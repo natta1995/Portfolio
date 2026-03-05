@@ -17,17 +17,17 @@ export default function StartPage() {
           {/* Text */}
           <div>
             <p className="text-sm font-medium text-zinc-600">
-              Backendutvecklare (.NET) • LIA-sökande
+              Junior fullstackutvecklare 
             </p>
 
             <h1 className="mt-3 text-3xl font-semibold tracking-tight text-zinc-900 sm:text-4xl">
-              Jag bygger stabila API:er och gillar tydliga, clean lösningar.
+              Jag gillar att lösa problem och skapa tydliga, clean lösningar.
             </h1>
 
             <p className="mt-4 max-w-prose text-zinc-600">
-              Jag studerar backend i C#/.NET och har erfarenhet av JS/TS. Jag
-              trivs med struktur, bra flöden och “good enough” som faktiskt blir
-              klart.
+            Jag är utbildad frontendutvecklare med inriktning på webbsäkerhet och har
+            erfarenhet av JavaScript, TypeScript och React. Just nu studerar jag backend
+            i C#/.NET med fokus på cloud.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
@@ -70,8 +70,8 @@ export default function StartPage() {
             </div>
 
             <div className="mt-3 flex items-center justify-between px-1">
-              <p className="text-sm font-medium text-zinc-900">Natalie</p>
-              <p className="text-sm text-zinc-600">Göteborg</p>
+              <p className="text-sm font-medium text-zinc-900">Natalie Hällerdal</p>
+              <p className="text-sm text-zinc-600">Göteborg / Sverige</p>
             </div>
           </div>
         </div>
@@ -82,7 +82,7 @@ export default function StartPage() {
         {[
           { title: "Fokus", desc: ".NET, API, databas & tydlig struktur." },
           { title: "Stil", desc: "Clean kod, små steg, stabilt resultat." },
-          { title: "Mål", desc: "LIA där jag kan växa och bidra direkt." },
+          { title: "Mål", desc: "Arbeta med problemlösning och skapa användarvänliga lösningar." },
         ].map((c) => (
           <div
             key={c.title}
