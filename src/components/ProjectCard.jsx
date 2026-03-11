@@ -8,7 +8,7 @@ const ProjectCard = ({
   tags = [],
   list = [],
   longText,
-  links = [], // [{ label: "Frontend repo", href: "..." }, ...]
+  links = [],
 }) => {
   const [open, setOpen] = useState(false);
 
@@ -17,14 +17,25 @@ const ProjectCard = ({
   return (
     <>
       {/* Card */}
-      <div className="group overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm transition hover:shadow-md">
-        <div className="overflow-hidden">
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        className="group w-full overflow-hidden rounded-2xl border border-zinc-200 bg-white text-left shadow-sm transition duration-300 hover:scale-[1.02] hover:shadow-md"
+      >
+        <div className="relative overflow-hidden">
           <img
             src={image}
             alt={title}
-            className="h-52 w-full object-cover transition duration-300 group-hover:scale-105"
+            className="h-52 w-full object-cover"
             loading="lazy"
           />
+
+          {/* Hover overlay */}
+          <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <span className="text-sm font-medium text-white">
+              Klicka för mer information
+            </span>
+          </div>
         </div>
 
         <div className="p-5">
@@ -44,14 +55,9 @@ const ProjectCard = ({
             </div>
           )}
 
-          <button
-            onClick={() => setOpen(true)}
-            className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-zinc-900 hover:underline"
-          >
-            Läs mer <span aria-hidden>→</span>
-          </button>
+        
         </div>
-      </div>
+      </button>
 
       {/* Modal */}
       {open && (
@@ -65,7 +71,6 @@ const ProjectCard = ({
             className="mx-auto mt-16 w-full max-w-2xl rounded-3xl border border-zinc-200 bg-white p-7 shadow-xl sm:p-8"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Top row */}
             <div className="flex items-start justify-between gap-4">
               <div>
                 <h2 className="text-2xl font-semibold text-zinc-900">{title}</h2>
@@ -103,7 +108,6 @@ const ProjectCard = ({
               </ul>
             )}
 
-            {/* Links */}
             {links.length > 0 && (
               <div className="mt-7 flex flex-wrap gap-3">
                 {links.map((l) => (

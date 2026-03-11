@@ -10,8 +10,12 @@ export default function Footer() {
           <div>
             <p className="text-sm font-medium text-zinc-900">Kontakt</p>
             <p className="mt-1 text-sm text-zinc-600">
-              Hör gärna av dig – jag svarar så fort jag kan.
+              Vill du prata Jobb, LIA, projekt eller bara säga hej?
             </p>
+              <p className="mt-1 text-sm text-zinc-600">
+              Du når mig lättast via mejl eller LinkedIn.
+            </p>
+            
           </div>
 
           <div className="flex flex-col gap-2 text-sm">

@@ -10,7 +10,7 @@ const ContactPage = () => {
         </h1>
         <p className="mt-4 text-zinc-600">
           Vill du prata Jobb, LIA, projekt eller bara säga hej?
-          Hör gärna av dig – jag svarar så fort jag kan.
+          Hör gärna av dig!
         </p>
       </section>
 
