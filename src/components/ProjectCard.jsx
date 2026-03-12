@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { XIcon, ExternalLinkIcon, GithubIcon } from "lucide-react";
+import defaultVideo from "../Video/default.mp4";
 
 const ProjectCard = ({
   title,
@@ -9,10 +10,12 @@ const ProjectCard = ({
   list = [],
   longText,
   links = [],
+  video,
 }) => {
   const [open, setOpen] = useState(false);
 
   const isGithub = (url = "") => url.toLowerCase().includes("github.com");
+  const videoToShow = video || defaultVideo;
 
   return (
     <>
@@ -30,7 +33,6 @@ const ProjectCard = ({
             loading="lazy"
           />
 
-          {/* Hover overlay */}
           <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
             <span className="text-sm font-medium text-white">
               Klicka för mer information
@@ -54,8 +56,6 @@ const ProjectCard = ({
               ))}
             </div>
           )}
-
-        
         </div>
       </button>
 
@@ -68,71 +68,97 @@ const ProjectCard = ({
           aria-modal="true"
         >
           <div
-            className="mx-auto mt-16 w-full max-w-2xl rounded-3xl border border-zinc-200 bg-white p-7 shadow-xl sm:p-8"
+            className="mx-auto mt-10 w-full max-w-7xl rounded-3xl border border-zinc-200 bg-white p-7 shadow-xl sm:p-8"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <h2 className="text-2xl font-semibold text-zinc-900">{title}</h2>
+            {/* Övre del */}
+            <div className="border-b border-zinc-200 pb-6">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h2 className="text-2xl font-semibold text-zinc-900">
+                    {title}
+                  </h2>
 
-                {tags.length > 0 && (
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs text-zinc-600"
+                  {tags.length > 0 && (
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs text-zinc-600"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                <button
+                  onClick={() => setOpen(false)}
+                  className="rounded-xl border border-zinc-200 bg-white p-2 text-zinc-600 transition hover:bg-zinc-50 hover:text-zinc-900"
+                  aria-label="Stäng"
+                >
+                  <XIcon size={18} />
+                </button>
+              </div>
+            </div>
+
+            {/* Nedre del */}
+            <div className="mt-6 grid items-start gap-8 lg:grid-cols-3">
+              {/* Vänster: text */}
+              <div className="lg:col-span-1">
+                {longText && <p className="text-zinc-600">{longText}</p>}
+
+                {list.length > 0 && (
+                  <ul className="mt-5 list-disc space-y-2 pl-6 text-zinc-600">
+                    {list.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                )}
+
+                {links.length > 0 && (
+                  <div className="mt-7 flex flex-wrap gap-3">
+                    {links.map((l) => (
+                      <a
+                        key={l.href}
+                        href={l.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium transition ${
+                          isGithub(l.href)
+                            ? "bg-zinc-900 text-white hover:bg-zinc-800"
+                            : "border border-zinc-200 bg-white text-zinc-900 hover:bg-zinc-50"
+                        }`}
                       >
-                        {tag}
-                      </span>
+                        {isGithub(l.href) ? (
+                          <GithubIcon size={18} />
+                        ) : (
+                          <ExternalLinkIcon size={18} />
+                        )}
+                        {l.label}
+                      </a>
                     ))}
                   </div>
                 )}
               </div>
 
-              <button
-                onClick={() => setOpen(false)}
-                className="rounded-xl border border-zinc-200 bg-white p-2 text-zinc-600 transition hover:bg-zinc-50 hover:text-zinc-900"
-                aria-label="Stäng"
-              >
-                <XIcon size={18} />
-              </button>
-            </div>
-
-            {longText && <p className="mt-5 text-zinc-600">{longText}</p>}
-
-            {list.length > 0 && (
-              <ul className="mt-5 list-disc space-y-2 pl-6 text-zinc-600">
-                {list.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
-            )}
-
-            {links.length > 0 && (
-              <div className="mt-7 flex flex-wrap gap-3">
-                {links.map((l) => (
-                  <a
-                    key={l.href}
-                    href={l.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium transition
-                      ${
-                        isGithub(l.href)
-                          ? "bg-zinc-900 text-white hover:bg-zinc-800"
-                          : "border border-zinc-200 bg-white text-zinc-900 hover:bg-zinc-50"
-                      }`}
+              {/* Höger: video */}
+              <div className="lg:col-span-2">
+                <div className="aspect-video w-full overflow-hidden rounded-lg border border-zinc-50 bg-black shadow-lg">
+                  <video
+                    className="h-full w-full object-contain"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
                   >
-                    {isGithub(l.href) ? (
-                      <GithubIcon size={18} />
-                    ) : (
-                      <ExternalLinkIcon size={18} />
-                    )}
-                    {l.label}
-                  </a>
-                ))}
+                    <source src={videoToShow} type="video/mp4" />
+                    Din webbläsare stödjer inte video.
+                  </video>
+                </div>
               </div>
-            )}
+            </div>
           </div>
         </div>
       )}

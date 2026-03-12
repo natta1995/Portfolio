@@ -2,6 +2,7 @@
 import ProjectCard from "../components/ProjectCard";
 import DearFriendsImage from "../Img/dear.png";
 import DetectivTrackerImage from "../Img/DetectivTracker.png";
+import DemoDetectiveQuest from "../Video/Demo-DetectiveQuest.mp4";
 
 const ProjectsPage = () => {
   const projects = [
@@ -50,6 +51,7 @@ const ProjectsPage = () => {
 ],
   
       image: DetectivTrackerImage,
+      video: DemoDetectiveQuest,
       tags: [".Net", "C#"],
         links: [
       { label: "Github repo", href: "https://github.com/natta1995/TheDetectiveQuestTracker"},

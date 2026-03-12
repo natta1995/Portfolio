@@ -47,7 +47,7 @@ export default function StartPage() {
 
             {/* Highlights */}
             <div className="mt-7 flex flex-wrap gap-2">
-              {["C#", ".NET", "API", "SQL", "Swagger", "Github", "Gitlab", "JavaScript", "TypeScript", "React"].map((x) => (
+              {["C#", ".NET", "API", "SQL", "Github", "Gitlab", "JavaScript", "TypeScript", "React", "Git", "HTML", "CSS", "REST API", "Vite"].map((x) => (
                 <span
                   key={x}
                   className="rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs text-zinc-700"
