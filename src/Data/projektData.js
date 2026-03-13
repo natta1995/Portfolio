@@ -1,6 +1,7 @@
 import DearFriendsImage from "../Img/dear.png";
 import DetectivTrackerImage from "../Img/DetectivTracker.png";
 import WhatToDoTodayImage from "../Img/WhatToDoToday.png";
+import defaultImage from "../Img/DefaultImg.png";
 
 import DemoDetectiveQuestVideo from "../Video/Demo-DetectiveQuest.mp4";
 import WhatToDoTodayVideo from "../Video/Demo-WhatToDoToday.mp4";
@@ -75,7 +76,23 @@ const projects = [
   video: WhatToDoTodayVideo,
   tags: ["JavaScript", "React", "Vite", "CSS"],
   links: [
-    { label: "Frontend repo", href: "https://github.com/natta1995/what-to-do-today" },
+    { label: "Github repo", href: "https://github.com/natta1995/what-to-do-today" },
+  ],
+},
+
+{
+  title: "Fullstack applikation - StudentPlanning",
+  description:
+    "En applikation som hjälper studenter att lägga upp och prioritera sin studier på ett bra sätt.",
+  longText: "I applikationen kan du:",
+  list: [
+    "Information kommer snart.",
+ 
+  ],
+  image: defaultImage,
+  tags: ["SQL", "Blazor", "C#", "Entity Framework"],
+  links: [
+    { label: "Github repo", href: "https://github.com/natta1995/StudentPlanning" },
   ],
 },
   ];

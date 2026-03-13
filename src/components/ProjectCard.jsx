@@ -2,6 +2,7 @@ import { useState } from "react";
 import { XIcon, ExternalLinkIcon, GithubIcon } from "lucide-react";
 import defaultVideo from "../Video/default.mp4";
 
+
 const ProjectCard = ({
   title,
   description,
@@ -16,6 +17,7 @@ const ProjectCard = ({
 
   const isGithub = (url = "") => url.toLowerCase().includes("github.com");
   const videoToShow = video || defaultVideo;
+
 
   return (
     <>
