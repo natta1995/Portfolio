@@ -1,6 +1,9 @@
 import DearFriendsImage from "../Img/dear.png";
 import DetectivTrackerImage from "../Img/DetectivTracker.png";
-import DemoDetectiveQuest from "../Video/Demo-DetectiveQuest.mp4";
+import WhatToDoTodayImage from "../Img/WhatToDoToday.png";
+
+import DemoDetectiveQuestVideo from "../Video/Demo-DetectiveQuest.mp4";
+import WhatToDoTodayVideo from "../Video/Demo-WhatToDoToday.mp4";
 
 const projects = [
     {
@@ -48,13 +51,33 @@ const projects = [
 ],
   
       image: DetectivTrackerImage,
-      video: DemoDetectiveQuest,
+      video: DemoDetectiveQuestVideo,
       tags: [".Net", "C#"],
         links: [
       { label: "Github repo", href: "https://github.com/natta1995/TheDetectiveQuestTracker"},
     ],
     },
-
+ {
+  title: "Frontend applikation - Aktivitetsgenerator",
+  description:
+    "En React-applikation som genererar aktivitetsförslag baserat på användarens val av plats och årstid.",
+  longText: "I applikationen kan du:",
+  list: [
+    "Välja om du är hemma eller borta",
+    "Få ett slumpmässigt aktivitetsförslag",
+    "Se olika förslag beroende på årstid",
+    "Få en tydlig presentation av aktiviteten i ett popup-fönster",
+    "Se en beskrivning av aktiviteten och hur den kan göras",
+    "Få ett varierat gränssnitt beroende på val och säsong",
+    "Utforska ett responsivt gränssnitt byggt med React och CSS"
+  ],
+  image: WhatToDoTodayImage,
+  video: WhatToDoTodayVideo,
+  tags: ["JavaScript", "React", "Vite", "CSS"],
+  links: [
+    { label: "Frontend repo", href: "https://github.com/natta1995/what-to-do-today" },
+  ],
+},
   ];
 
 export default projects;
