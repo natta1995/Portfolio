@@ -2,7 +2,6 @@ import { useState } from "react";
 import { XIcon, ExternalLinkIcon, GithubIcon } from "lucide-react";
 import defaultVideo from "../Video/default.mp4";
 
-
 const ProjectCard = ({
   title,
   description,
@@ -12,12 +11,12 @@ const ProjectCard = ({
   longText,
   links = [],
   video,
+  status,
 }) => {
   const [open, setOpen] = useState(false);
 
   const isGithub = (url = "") => url.toLowerCase().includes("github.com");
   const videoToShow = video || defaultVideo;
-
 
   return (
     <>
@@ -35,6 +34,13 @@ const ProjectCard = ({
             loading="lazy"
           />
 
+    {status && (
+      <div className="absolute left-4 top-4 z-10 rounded-full border border-zinc-200 bg-white/90 px-3 py-1 text-xs font-medium text-zinc-700 shadow-sm backdrop-blur">
+        {status}
+      </div>
+    )}
+
+          {/* Hover overlay */}
           <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
             <span className="text-sm font-medium text-white">
               Klicka för mer information
@@ -107,7 +113,7 @@ const ProjectCard = ({
 
             {/* Nedre del */}
             <div className="mt-6 grid items-start gap-8 lg:grid-cols-3">
-              {/* Vänster: text */}
+              {/* Vänster */}
               <div className="lg:col-span-1">
                 {longText && <p className="text-zinc-600">{longText}</p>}
 
@@ -145,7 +151,7 @@ const ProjectCard = ({
                 )}
               </div>
 
-              {/* Höger: video */}
+              {/* Höger video */}
               <div className="lg:col-span-2">
                 <div className="aspect-video w-full overflow-hidden rounded-lg border border-zinc-50 bg-black shadow-lg">
                   <video

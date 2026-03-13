@@ -1,4 +1,4 @@
-import DearFriendsImage from "../Img/dear.png";
+import DearFriendsImage from "../Img/DearFriends.png";
 import DetectivTrackerImage from "../Img/DetectivTracker.png";
 import WhatToDoTodayImage from "../Img/WhatToDoToday.png";
 import defaultImage from "../Img/DefaultImg.png";
@@ -81,13 +81,12 @@ const projects = [
 },
 
 {
-  title: "Fullstack applikation - StudentPlanning",
+  title: "Under utveckling - StudentPlanning",
+  status: "Under utveckling",
   description:
     "En applikation som hjälper studenter att lägga upp och prioritera sin studier på ett bra sätt.",
   longText: "I applikationen kan du:",
   list: [
-    "Information kommer snart.",
- 
   ],
   image: defaultImage,
   tags: ["SQL", "Blazor", "C#", "Entity Framework"],

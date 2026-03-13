@@ -9,9 +9,7 @@ export default function Footer() {
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="text-sm font-medium text-zinc-900">Kontakt</p>
-            <p className="mt-1 text-sm text-zinc-600">
-              Vill du prata Jobb, LIA, projekt eller bara säga hej?
-            </p>
+          
               <p className="mt-1 text-sm text-zinc-600">
               Du når mig lättast via mejl eller LinkedIn.
             </p>
@@ -25,11 +23,7 @@ export default function Footer() {
               natalie.hallerdal@yahoo.se
             </a>
             <div className="flex gap-4 text-zinc-600">
-            <a
-              className="text-zinc-700 hover:text-zinc-900"
-            >
-              0735936556
-            </a>
+         
             </div>
           </div>
         </div>
