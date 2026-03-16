@@ -73,6 +73,17 @@ export default function StartPage() {
               <p className="text-sm font-medium text-zinc-900">Natalie Hällerdal</p>
               <p className="text-sm text-zinc-600">Göteborg / Sverige</p>
             </div>
+                <div className="mt-3 flex items-center justify-between px-1">
+              <p className="text-sm font-medium text-zinc-900">CV</p>
+     <a
+  href="https://natta1995.github.io/myCV/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-blue-600 hover:underline"
+>
+  Öppna i nytt fönster
+</a>
+            </div>
           </div>
         </div>
       </section>
