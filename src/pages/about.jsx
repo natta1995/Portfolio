@@ -67,6 +67,17 @@ export default function AboutPage() {
           </div>
         ))}
       </section>
+      <div className="mt-3 flex items-center justify-between px-1">
+             
+                <a
+              href="https://natta1995.github.io/myCV/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-black-600 hover:underline"
+            >
+              Öppna CV i nytt fönster
+            </a>
+            </div>
         </div>
       </section>
        

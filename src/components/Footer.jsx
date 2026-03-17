@@ -11,7 +11,7 @@ export default function Footer() {
             <p className="text-sm font-medium text-zinc-900">Kontakt</p>
           
               <p className="mt-1 text-sm text-zinc-600">
-              Du når mig lättast via mejl eller LinkedIn.
+              Du når mig via mejl eller LinkedIn.
             </p>
             
           </div>
@@ -23,6 +23,8 @@ export default function Footer() {
               natalie.hallerdal@yahoo.se
             </a>
             <div className="flex gap-4 text-zinc-600">
+
+              
          
             </div>
           </div>
