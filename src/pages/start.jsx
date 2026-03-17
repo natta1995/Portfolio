@@ -17,17 +17,16 @@ export default function StartPage() {
           {/* Text */}
           <div>
             <p className="text-sm font-medium text-zinc-600">
-              Junior fullstackutvecklare 
+              Junior Fullstackutvecklare 
             </p>
 
             <h1 className="mt-3 text-3xl font-semibold tracking-tight text-zinc-900 sm:text-4xl">
-              Jag gillar att lösa problem och skapa tydliga, clean lösningar.
+              Jag gillar att bryta ner och lösa problem.
             </h1>
 
             <p className="mt-4 max-w-prose text-zinc-600">
-            Jag är utbildad frontendutvecklare med inriktning på webbsäkerhet och har
-            erfarenhet av JavaScript, TypeScript och React. Just nu studerar jag backend
-            i C#/.NET med fokus på cloud.
+            Jag är en junior fullstackutvecklare som brinner för att skapa tydliga och välstrukturerade lösningar. 
+         
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
@@ -74,15 +73,15 @@ export default function StartPage() {
               <p className="text-sm text-zinc-600">Göteborg / Sverige</p>
             </div>
                 <div className="mt-3 flex items-center justify-between px-1">
-              <p className="text-sm font-medium text-zinc-900">CV</p>
-     <a
-  href="https://natta1995.github.io/myCV/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="text-blue-600 hover:underline"
->
-  Öppna i nytt fönster
-</a>
+             
+                <a
+              href="https://natta1995.github.io/myCV/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-black-600 hover:underline"
+            >
+              Öppna CV i nytt fönster
+            </a>
             </div>
           </div>
         </div>
@@ -91,7 +90,7 @@ export default function StartPage() {
       {/* Small clean section under hero */}
       <section className="mt-10 grid gap-4 sm:grid-cols-3">
         {[
-          { title: "Fokus", desc: ".NET, API, databas & tydlig struktur." },
+          { title: "Fokus", desc: "Att utvecklas som fullstackutvecklare med fokus på C#/.NET och Cloud." },
           { title: "Stil", desc: "Clean kod, små steg, stabilt resultat." },
           { title: "Mål", desc: "Arbeta med problemlösning och skapa användarvänliga lösningar." },
         ].map((c) => (

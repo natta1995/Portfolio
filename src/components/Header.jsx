@@ -29,14 +29,16 @@ const Header = () => {
           to="/"
           className="text-sm font-medium tracking-tight text-zinc-900"
         >
-          Natalie Hällerdal
+         Natalie Hällerdal
         </Link>
 
         {/* Navigation */}
         <nav className="flex items-center gap-6">
           {navLink("/", "Start")}
           {navLink("/projects", "Projekt")}
+          {navLink("/about", "Om mig")}
           {navLink("/contact", "Kontakt")}
+          
         </nav>
       </div>
     </header>
