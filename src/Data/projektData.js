@@ -5,6 +5,7 @@ import defaultImage from "../Img/DefaultImg.png";
 
 import DemoDetectiveQuestVideo from "../Video/Demo-DetectiveQuest.mp4";
 import WhatToDoTodayVideo from "../Video/Demo-WhatToDoToday.mp4";
+import DearFriendsVideo from "../Video/Demo-DearFriends.mp4";
 
 const projects = [
     {
@@ -24,6 +25,7 @@ const projects = [
         "Söka efter andra användare och få vännerförslag",
   ],
       image: DearFriendsImage,
+      video: DearFriendsVideo,
       tags: ["Node.js", "React", "Express.js", "TypeScript", "SQL"],
         links: [
       { label: "Frontend repo", href: "https://github.com/dittnamn/frontend" },
