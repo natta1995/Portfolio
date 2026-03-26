@@ -70,13 +70,13 @@ const ProjectCard = ({
       {/* Modal */}
       {open && (
         <div
-          className="fixed inset-0 z-50 bg-black/30 p-4"
+          className="fixed inset-0 z-50 overflow-y-auto bg-black/40 p-3 sm:p-4"
           onClick={() => setOpen(false)}
           role="dialog"
           aria-modal="true"
         >
           <div
-            className="mx-auto mt-10 w-full max-w-7xl rounded-3xl border border-zinc-200 bg-white p-7 shadow-xl sm:p-8"
+            className="mx-auto my-4 w-full max-w-7xl rounded-3xl border border-zinc-200 bg-white p-5 shadow-xl sm:my-8 sm:p-8 max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Övre del */}
