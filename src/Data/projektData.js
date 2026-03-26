@@ -1,13 +1,39 @@
+// Image
 import DearFriendsImage from "../Img/DearFriends.png";
 import DetectivTrackerImage from "../Img/DetectivTracker.png";
 import WhatToDoTodayImage from "../Img/WhatToDoToday.png";
 import defaultImage from "../Img/DefaultImg.png";
+import GithubStatsImage from "../Img/GithubStats.png";
 
+// Video
 import DemoDetectiveQuestVideo from "../Video/Demo-DetectiveQuest.mp4";
 import WhatToDoTodayVideo from "../Video/Demo-WhatToDoToday.mp4";
 import DearFriendsVideo from "../Video/Demo-DearFriends.mp4";
+import GithubStatsVideo from "../Video/Demo-GithubStats.mp4";
 
 const projects = [
+   {
+      title: "Blazor application - GithubStats ",
+      description:
+        "Sök och visa information om Githubanvändare med hjälp av Githubs REST API.",
+      longText:"I applikationen kan du:",
+      list: [
+        "Hämtar data ifrån Githubs REST API",
+        "Sök efter Githubanvändare och visa deras profilinformation",
+        "Visa användarens repositories och deras beskrivning",
+        "Visa användarens followers och following",
+        "Visa När ens användares repo senast uppdaterades",
+        "Visa de programmeringsspråk som användaren använt",
+        "Se en grafisk representation över vilka programmeringssråk som användaren använt mest i sina repon."
+     
+  ],
+      image: GithubStatsImage,
+      video: GithubStatsVideo,
+      tags: ["C#", "Blazor", ".Net", "Github REST API"],
+        links: [
+      { label: "Github repo", href: "https://github.com/natta1995/GithubStats" },
+    ],
+    },
     {
       title: "Socialt Nätverk - DearFriends",
       description:
@@ -28,8 +54,8 @@ const projects = [
       video: DearFriendsVideo,
       tags: ["Node.js", "React", "Express.js", "TypeScript", "SQL"],
         links: [
-      { label: "Frontend repo", href: "https://github.com/dittnamn/frontend" },
-      { label: "Backend repo", href: "https://github.com/dittnamn/backend" },
+      { label: "Frontend repo", href: "https://github.com/natta1995/frontend-app" },
+      { label: "Backend repo", href: "https://github.com/natta1995/backend-app" },
     ],
     },
     {
