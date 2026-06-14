@@ -35,8 +35,9 @@ const Header = () => {
         {/* Navigation */}
         <nav className="flex items-center gap-6">
           {navLink("/", "Start")}
-          {navLink("/projects", "Projekt")}
           {navLink("/about", "Om mig")}
+          {navLink("/projects", "Projekt")}
+          {navLink("/demos", "Demos")}
           {navLink("/contact", "Kontakt")}
           
         </nav>
