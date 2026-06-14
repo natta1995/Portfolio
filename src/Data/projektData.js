@@ -4,14 +4,66 @@ import DetectivTrackerImage from "../Img/DetectivTracker.png";
 import WhatToDoTodayImage from "../Img/WhatToDoToday.png";
 import defaultImage from "../Img/DefaultImg.png";
 import GithubStatsImage from "../Img/GithubStats.png";
+import QuestGameDetectiveImage from "../Img/QuestGameDetective.png";
+import VeterinaryJournalSystemImage from "../Img/VetCare.png";
 
 // Video
 import DemoDetectiveQuestVideo from "../Video/Demo-DetectiveQuest.mp4";
 import WhatToDoTodayVideo from "../Video/Demo-WhatToDoToday.mp4";
 import DearFriendsVideo from "../Video/Demo-DearFriends.mp4";
 import GithubStatsVideo from "../Video/Demo-GithubStats.mp4";
+import DetectiveGameVideo from "../Video/Demo-DetectiveGame.mp4";
 
 const projects = [
+    {
+      title: "Fullstack application - VeterinaryJournalSystem",
+      status: "Under utveckling",
+      description:
+        "Rollbaserat journalsystem för personal på en veterinärklinik. Byggt i Blazor och C#.",
+      longText: "I applikationen kan du:",
+      list: [
+      ],
+      image: VeterinaryJournalSystemImage,
+      tags: ["SQL", "Blazor", "C#", "Entity Framework", "Tests", "Clean Architecture", "Github Actions"],
+      links: [
+        { label: "Github repo", href: "https://github.com/natta1995/VeterinaryJournalSystem" },
+      ],
+    },
+
+     {
+      title: "Fullstack application - QuestGameDetective ",
+      description:
+        "Ett textbaserat spel där tar tar rollen som en detektiv som löser mysterier i ett London 1939.",
+      longText:"I applikationen kan du:",
+      list: [
+      "Registrera och logga in som användare",
+      "Justera skärmstorlek och stänga av/på musik",
+      "Läsa introduktionsbrev och navigera mellan Hallen och Arbetsrummet",
+      "Visa tillgängliga mordfall",
+      "Acceptera ett mordfall och lägga till det i Mina utredningar",
+      "Öppna en utredningsfil och bläddra mellan bevis, ledtrådar och misstänkta",
+      "Granska misstänkta och deras information",
+      "Välja en misstänkt eller annan dödsorsak som slutsats",
+      "Få resultat på om slutsatsen var rätt eller fel",
+      "Visa lösning, ledtrådar och sammanfattning efter avslutad utredning",
+      "Samla poäng baserat på lyckade och misslyckade fall"
+    ],
+      image: QuestGameDetectiveImage,
+      video: DetectiveGameVideo,
+      tags: ["C#",
+      ".NET",
+      "React",
+      "SQL Server",
+      "Entity Framework Core",
+      "JWT",
+      "Clean Architecture",
+      "CQRS",
+      "MediatR"],
+        links: [
+       { label: "Frontend repo", href: "https://github.com/natta1995/QuestGameDetective-Frontend" },
+      { label: "Backend repo", href: "https://github.com/natta1995/QuestGameDetective-Backend" },
+    ],
+    },
    {
       title: "Blazor application - GithubStats ",
       description:
@@ -108,20 +160,7 @@ const projects = [
   ],
 },
 
-{
-  title: "Under utveckling - StudentPlanning",
-  status: "Under utveckling",
-  description:
-    "En applikation som hjälper studenter att lägga upp och prioritera sin studier på ett bra sätt.",
-  longText: "I applikationen kan du:",
-  list: [
-  ],
-  image: defaultImage,
-  tags: ["SQL", "Blazor", "C#", "Entity Framework"],
-  links: [
-    { label: "Github repo", href: "https://github.com/natta1995/StudentPlanning" },
-  ],
-},
+
   ];
 
 export default projects;
