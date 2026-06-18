@@ -29,7 +29,6 @@ const Header = () => {
           to="/"
           className="text-sm font-medium tracking-tight text-zinc-900"
         >
-         Natalie Hällerdal
         </Link>
 
         {/* Navigation */}
