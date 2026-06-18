@@ -17,17 +17,19 @@ export default function StartPage() {
           {/* Text */}
           <div>
             <p className="text-sm font-medium text-zinc-600">
-              Junior Fullstackutvecklare 
+                Junior fullstackutvecklare • C#/.NET • React
             </p>
 
             <h1 className="mt-3 text-3xl font-semibold tracking-tight text-zinc-900 sm:text-4xl">
-              Jag gillar att bryta ner och lösa problem.
+              Hej och välkommen till min portfolio!
             </h1>
 
+        
             <p className="mt-4 max-w-prose text-zinc-600">
-            Jag är en junior fullstackutvecklare som brinner för att skapa tydliga och välstrukturerade lösningar. 
+  Vad kul att du är här! Jag heter Natalie och har en bakgrund inom frontend och webbsäkerhet. Just nu studerar jag backendutveckling med inriktning Cloud och bygger vidare mot fullstackutveckling.
+</p>
          
-            </p>
+            
 
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
@@ -72,7 +74,7 @@ export default function StartPage() {
               <p className="text-sm font-medium text-zinc-900">Natalie Hällerdal</p>
               <p className="text-sm text-zinc-600">Göteborg / Sverige</p>
             </div>
-                <div className="mt-3 flex items-center justify-between px-1">
+                {/* <div className="mt-3 flex items-center justify-between px-1">
              
                 <a
               href="https://natta1995.github.io/myCV/"
@@ -82,13 +84,13 @@ export default function StartPage() {
             >
               Öppna CV i nytt fönster
             </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
 
       {/* Small clean section under hero */}
-      <section className="mt-10 grid gap-4 sm:grid-cols-3">
+      {/* <section className="mt-10 grid gap-4 sm:grid-cols-3">
         {[
           { title: "Fokus", desc: "Att utvecklas som fullstackutvecklare med fokus på C#/.NET och Cloud." },
           { title: "Stil", desc: "Clean kod, små steg, stabilt resultat." },
@@ -102,7 +104,7 @@ export default function StartPage() {
             <p className="mt-2 text-sm text-zinc-600">{c.desc}</p>
           </div>
         ))}
-      </section>
+      </section> */}
     </main>
   );
 }

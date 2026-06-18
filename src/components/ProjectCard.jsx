@@ -76,7 +76,7 @@ const ProjectCard = ({
           aria-modal="true"
         >
           <div
-            className="mx-auto my-4 w-full max-w-7xl rounded-3xl border border-zinc-200 bg-white p-5 shadow-xl sm:my-8 sm:p-8 max-h-[90vh] overflow-y-auto"
+            className="mx-auto my-4 w-full max-w-[95vw] min-h-[85vh] rounded-3xl border border-zinc-200 bg-white p-5 shadow-xl sm:my-8 sm:p-8 max-h-[95vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Övre del */}

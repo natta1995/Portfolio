@@ -8,15 +8,15 @@ export default function Footer() {
       <div className="mx-auto max-w-5xl px-4 py-10">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="text-sm font-medium text-zinc-900">Kontakt</p>
+            {/* <p className="text-sm font-medium text-zinc-900">Kontakt</p> */}
           
-              <p className="mt-1 text-sm text-zinc-600">
+              {/* <p className="mt-1 text-sm text-zinc-600">
               Du når mig via mejl eller LinkedIn.
-            </p>
+            </p> */}
             
           </div>
 
-          <div className="flex flex-col gap-2 text-sm">
+          {/* <div className="flex flex-col gap-2 text-sm">
             <a
               className="text-zinc-700 hover:text-zinc-900"
             >
@@ -27,7 +27,7 @@ export default function Footer() {
               
          
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="mt-8 text-xs text-zinc-500">
