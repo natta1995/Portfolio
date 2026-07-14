@@ -36,7 +36,7 @@ const Header = () => {
           {navLink("/", "Start")}
           {navLink("/about", "Om mig")}
           {navLink("/projects", "Projekt")}
-          {navLink("/demos", "Demos")}
+          {/* {navLink("/demos", "Demos")} */}
           {navLink("/contact", "Kontakt")}
           
         </nav>
